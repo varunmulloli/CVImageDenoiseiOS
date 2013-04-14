@@ -7,7 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <opencv2/opencv.hpp>
+#include <vector>
+
+using namespace cv;
 
 @interface ViewController : UIViewController
+<UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+{
+    IBOutlet UIImageView *imageView;
+    IBOutlet UIToolbar *toolbar;
+}
+
+@property (nonatomic, strong) UIPopoverController *popOver;
 
 @end
